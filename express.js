@@ -43,3 +43,7 @@ res.json(newNote);
 app.delete("/api/notes/:id", function (req, res) {
     let jsonFilePath = path.join(__dirname, "/db/db.json");
 })
+
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+});

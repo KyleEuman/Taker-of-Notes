@@ -17,3 +17,14 @@ app.get("/", function (req, res) {
 app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "/notes.html"));
 })
+
+app.route("/api/notes")
+
+.get(function (req, res) {
+    res.json(database);
+})
+
+.post(function (req, res) {
+    let jsonFilePath = path.join(__dirname, "/db/db.json");
+    let newNote = req.body;
+})
